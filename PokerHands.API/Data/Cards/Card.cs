@@ -1,6 +1,6 @@
 using System;
 
-namespace Data.Cards
+namespace PokerHands.API.Data.Cards
 {
     public class Card : IComparable<Card>, IEquatable<Card>
     {

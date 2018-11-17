@@ -1,5 +1,5 @@
 
-namespace Data.Cards
+namespace PokerHands.API.Data.Cards
 {
 
     public enum CardRank

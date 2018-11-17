@@ -1,9 +1,10 @@
-using Data.Cards;
+using PokerHands.API.Data.Cards;
+using PokerHands.API.Data.Hands;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace Data.Hands
+namespace PokerHands.API.Test.Data.Hands
 {
     public class HandTests
     {

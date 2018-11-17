@@ -1,6 +1,6 @@
 using System;
 
-namespace Data.Hands
+namespace PokerHands.API.Data.Hands
 {
     public enum HandRank
     {

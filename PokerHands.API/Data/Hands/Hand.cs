@@ -1,10 +1,10 @@
-using Data.Cards;
+using PokerHands.API.Data.Cards;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Data.Hands
+namespace PokerHands.API.Data.Hands
 {
     public class Hand : IComparable<Hand>
     {

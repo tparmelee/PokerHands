@@ -1,12 +1,13 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using PokerHands.API.Data.Cards;
 
-namespace Data.Cards
+namespace PokerHands.API.Test.Data.Cards
 {
     public class CardTests
     {
-
+        [Test]
         [TestCase(CardRank.Two, CardSuit.SPADE)]
         [TestCase(CardRank.Three, CardSuit.HEART)]
         [TestCase(CardRank.Four, CardSuit.CLUB)]
@@ -20,28 +21,33 @@ namespace Data.Cards
         [TestCase(CardRank.Queen, CardSuit.CLUB)]
         [TestCase(CardRank.King, CardSuit.DIAMOND)]
         [TestCase(CardRank.Ace, CardSuit.SPADE)]
-        public void ConstructorSetsRankTheory(CardRank rank, CardSuit suit) {
+        public void ConstructorSetsRankTheory(CardRank rank, CardSuit suit)
+        {
             Card card = new Card(rank, suit);
 
             Assert.AreEqual(card.Rank, rank);
         }
 
+        [Test]
         [TestCase(CardRank.Two, CardSuit.SPADE)]
         [TestCase(CardRank.Three, CardSuit.HEART)]
         [TestCase(CardRank.Four, CardSuit.CLUB)]
         [TestCase(CardRank.Five, CardSuit.DIAMOND)]
-        public void ConstructorSetsSuitTheory(CardRank rank, CardSuit suit) {
+        public void ConstructorSetsSuitTheory(CardRank rank, CardSuit suit)
+        {
             Card card = new Card(rank, suit);
 
             Assert.AreEqual(card.Suit, suit);
         }
 
+        [Test]
         [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.SPADE, true)]
         [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.HEART, false)]
         [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.DIAMOND, false)]
         [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.CLUB, false)]
         [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Ace, CardSuit.SPADE, false)]
-        public void CardsAreEqual(CardRank rank1, CardSuit suit1, CardRank rank2, CardSuit suit2, bool expected) {
+        public void CardsAreEqual(CardRank rank1, CardSuit suit1, CardRank rank2, CardSuit suit2, bool expected)
+        {
             Card card1 = new Card(rank1, suit1);
             Card card2 = new Card(rank2, suit2);
 
@@ -49,7 +55,8 @@ namespace Data.Cards
         }
 
         [Test]
-        public void CardsCompareTo() {
+        public void CardsCompareTo()
+        {
             // Create a list of all cards in a "random" order. 
             List<Card> cards = new List<Card>();
 
@@ -77,7 +84,7 @@ namespace Data.Cards
             Assert.AreEqual(cards[4].Rank, CardRank.Six);
             Assert.AreEqual(cards[5].Rank, CardRank.Seven);
             Assert.AreEqual(cards[6].Rank, CardRank.Eight);
-            Assert.AreEqual(cards[7].Rank, CardRank.Nine);            
+            Assert.AreEqual(cards[7].Rank, CardRank.Nine);
             Assert.AreEqual(cards[8].Rank, CardRank.Ten);
             Assert.AreEqual(cards[9].Rank, CardRank.Jack);
             Assert.AreEqual(cards[10].Rank, CardRank.Queen);
