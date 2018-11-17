@@ -1,9 +1,8 @@
-using Data.Cards;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace Data.CardsTests
+namespace Data.Cards
 {
     public class CardTests
     {

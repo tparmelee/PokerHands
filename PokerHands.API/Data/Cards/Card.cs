@@ -56,7 +56,7 @@ namespace Data.Cards
             return 10 * (int) Rank + (int)Suit;
         }
 
-        private static int ConvertRankToPriority(CardRank rank)
+        public static int ConvertRankToPriority(CardRank rank)
         {
             switch (rank)
             {
