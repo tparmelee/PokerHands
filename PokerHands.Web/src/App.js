@@ -147,7 +147,6 @@ class App extends Component {
       case (2):
         // Heart
         return "H";
-
       case (3):
         // Spade
         return "S";

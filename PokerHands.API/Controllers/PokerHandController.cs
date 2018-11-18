@@ -26,13 +26,13 @@ namespace PokerHands.API.Controllers
         [HttpPost]
         public ActionResult<List<PokerhandApiOutput>> Post([FromBody] List<PokerhandApiInput> hands)
         {
-            Console.WriteLine("1");
+            
             // Null Check
             if (hands == null)
             {
                 return new BadRequestObjectResult("Null request.");
             }
-            Console.WriteLine("2");
+            
             try
             {
                 Dictionary<string, Hand> pokerHands = new Dictionary<string, Hand>();
@@ -44,17 +44,14 @@ namespace PokerHands.API.Controllers
 
                 List<KeyValuePair<string, Hand>> sortedhands = pokerHands.ToList();
                 sortedhands.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-                Console.WriteLine("3");
+                
                 List<PokerhandApiOutput> response;
                 response = sortedhands.Select((hand, index) => new PokerhandApiOutput {
                     Name = hand.Key,
                     HandType = Enum.GetName(typeof(HandRank), hand.Value.Rank),
                     Position = index + 1
                 }).ToList();
-
-                
-
-                Console.WriteLine("4");
+               
                 return response;    
             }
             catch (Exception ex)

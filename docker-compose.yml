@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: ./PokerHands.Web
+    ports:
+     - "80:80"
+  api:
+    build: ./PokerHands.API
+    ports:
+     - "5000:80"
