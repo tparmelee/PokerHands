@@ -6,6 +6,7 @@ namespace PokerHands.API.Controllers.PokerHandControllerData
     public class PokerhandApiOutput {
 
         public string Name;
-        public string HandType;        
+        public string HandType;  
+        public int Position;      
     }   
 }

@@ -33,18 +33,21 @@ namespace PokerHands.API.test.Controllers {
             inputData.Add(new PokerhandApiInput {Name = n2, Cards = h2.ToList()});
 
             PokerHandController controller = new PokerHandController();
-            var response = controller.Get(inputData);
+            var response = controller.Post(inputData);
 
             var responseData = response.Value;
 
             Assert.AreEqual(n1,responseData[0].Name);
             Assert.AreEqual("StraightFlush",responseData[0].HandType);
+            Assert.AreEqual(1,responseData[0].Position);
 
             Assert.AreEqual(n2,responseData[1].Name);
             Assert.AreEqual("Flush",responseData[1].HandType);
+            Assert.AreEqual(2,responseData[1].Position);
 
             Assert.AreEqual(n0,responseData[2].Name);
             Assert.AreEqual("HighCard",responseData[2].HandType);
+            Assert.AreEqual(3,responseData[2].Position);
         }
         
     }
