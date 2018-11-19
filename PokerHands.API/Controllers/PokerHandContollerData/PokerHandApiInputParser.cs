@@ -70,13 +70,13 @@ namespace PokerHands.API.Controllers.PokerHandControllerData
         public static CardSuit ParseCardSuit(string rawSuit) {
             switch (rawSuit.ToUpper()) {
                 case ("S"):
-                    return CardSuit.SPADE;
+                    return CardSuit.Spade;
                 case ("H"):
-                    return CardSuit.HEART;
+                    return CardSuit.Heart;
                 case ("C"):
-                    return CardSuit.CLUB;
+                    return CardSuit.Club;
                 case ("D"):
-                    return CardSuit.DIAMOND;
+                    return CardSuit.Diamond;
                 default:
                     throw new ArgumentOutOfRangeException("Rank string must be either S, H, C, or D.");
             }

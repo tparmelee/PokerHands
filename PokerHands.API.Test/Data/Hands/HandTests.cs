@@ -13,21 +13,21 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsComparison1() {
             // Pair
             List<Card> cards1 = new List<Card>();
-            cards1.Add(new Card(CardRank.Four, CardSuit.SPADE));
-            cards1.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards1.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards1.Add(new Card(CardRank.Ten, CardSuit.CLUB));
+            cards1.Add(new Card(CardRank.Four, CardSuit.Spade));
+            cards1.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards1.Add(new Card(CardRank.Ten, CardSuit.Club));
 
             Hand hand1 = new Hand(cards1);
 
             // Straight Flush
             List<Card> cards2 = new List<Card>();
-            cards2.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.King, CardSuit.HEART));
+            cards2.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.King, CardSuit.Heart));
 
             Hand hand2 = new Hand(cards2);
 
@@ -39,21 +39,21 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsComparison2() {
             // Pair
             List<Card> cards1 = new List<Card>();
-            cards1.Add(new Card(CardRank.Four, CardSuit.SPADE));
-            cards1.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards1.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards1.Add(new Card(CardRank.Ten, CardSuit.CLUB));
+            cards1.Add(new Card(CardRank.Four, CardSuit.Spade));
+            cards1.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards1.Add(new Card(CardRank.Ten, CardSuit.Club));
 
             Hand hand1 = new Hand(cards1);
 
             // Straight Flush
             List<Card> cards2 = new List<Card>();
-            cards2.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.King, CardSuit.HEART));
+            cards2.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.King, CardSuit.Heart));
 
             Hand hand2 = new Hand(cards2);
             
@@ -64,21 +64,21 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsComparison3() {
             // High Card - Low
             List<Card> cards1 = new List<Card>();
-            cards1.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards1.Add(new Card(CardRank.Jack, CardSuit.SPADE));
-            cards1.Add(new Card(CardRank.Queen, CardSuit.CLUB));
-            cards1.Add(new Card(CardRank.Two, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Six, CardSuit.DIAMOND));
+            cards1.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards1.Add(new Card(CardRank.Jack, CardSuit.Spade));
+            cards1.Add(new Card(CardRank.Queen, CardSuit.Club));
+            cards1.Add(new Card(CardRank.Two, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Six, CardSuit.Diamond));
 
             Hand hand1 = new Hand(cards1);
 
             // High Card - High
             List<Card> cards2 = new List<Card>();
-            cards2.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.Jack, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.Queen, CardSuit.CLUB));
-            cards2.Add(new Card(CardRank.Three, CardSuit.HEART));
-            cards2.Add(new Card(CardRank.Six, CardSuit.DIAMOND));
+            cards2.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.Jack, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.Queen, CardSuit.Club));
+            cards2.Add(new Card(CardRank.Three, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Six, CardSuit.Diamond));
 
             Hand hand2 = new Hand(cards2);
 
@@ -89,36 +89,61 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsComparison4() {
             // Straight Flush
             List<Card> cards1 = new List<Card>();
-            cards1.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards1.Add(new Card(CardRank.King, CardSuit.HEART));
+            cards1.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards1.Add(new Card(CardRank.King, CardSuit.Heart));
 
             Hand hand1 = new Hand(cards1);
             
             // Straight Flush
             List<Card> cards2 = new List<Card>();
-            cards2.Add(new Card(CardRank.Jack, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.Queen, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.Ten, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.Nine, CardSuit.SPADE));
-            cards2.Add(new Card(CardRank.King, CardSuit.SPADE));
+            cards2.Add(new Card(CardRank.Jack, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.Queen, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.Ten, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.Nine, CardSuit.Spade));
+            cards2.Add(new Card(CardRank.King, CardSuit.Spade));
 
             Hand hand2 = new Hand(cards2);
             
             Assert.AreEqual(0, hand1.CompareTo(hand2)); 
         }
 
+         [Test]
+        public void HandsComparison5() {
+            // Pair Of 9s, King High
+            List<Card> cards1 = new List<Card>();
+            cards1.Add(new Card(CardRank.Two, CardSuit.Spade));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards1.Add(new Card(CardRank.Seven, CardSuit.Diamond));
+            cards1.Add(new Card(CardRank.King, CardSuit.Club));
+            cards1.Add(new Card(CardRank.Nine, CardSuit.Heart));
+
+            Hand hand1 = new Hand(cards1);
+            
+            // Pair of 4s, Ace High
+            List<Card> cards2 = new List<Card>();
+            cards2.Add(new Card(CardRank.Three, CardSuit.Heart));
+            cards2.Add(new Card(CardRank.Four, CardSuit.Diamond));
+            cards2.Add(new Card(CardRank.Four, CardSuit.Club));
+            cards2.Add(new Card(CardRank.Two, CardSuit.Diamond));
+            cards2.Add(new Card(CardRank.Ace, CardSuit.Heart));
+
+            Hand hand2 = new Hand(cards2);
+            
+            Assert.AreEqual(1, hand1.CompareTo(hand2)); 
+        }
+
         [Test]
         public void HandsRankHighCard()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Jack, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Queen, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Two, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Six, CardSuit.DIAMOND));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Queen, CardSuit.Club));
+            cards.Add(new Card(CardRank.Two, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Six, CardSuit.Diamond));
 
             Hand hand = new Hand(cards);
 
@@ -129,11 +154,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankPair()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Four, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Ten, CardSuit.CLUB));
+            cards.Add(new Card(CardRank.Four, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Club));
 
             Hand hand = new Hand(cards);
 
@@ -144,11 +169,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankTwoPair()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Ten, CardSuit.CLUB));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Club));
 
             Hand hand = new Hand(cards);
 
@@ -159,11 +184,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankThreeOfAKind()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Six, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Nine, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Two, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Nine, CardSuit.CLUB));
+            cards.Add(new Card(CardRank.Six, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Two, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Club));
 
             Hand hand = new Hand(cards);
 
@@ -174,11 +199,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankStraight()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Four, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Three, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Five, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Seven, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Six, CardSuit.SPADE));
+            cards.Add(new Card(CardRank.Four, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Three, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Five, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Seven, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Six, CardSuit.Spade));
 
             Hand hand = new Hand(cards);
 
@@ -189,11 +214,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankFlush()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Two, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Four, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Eight, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Seven, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Ace, CardSuit.HEART));
+            cards.Add(new Card(CardRank.Two, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Four, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Eight, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Seven, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Heart));
 
             Hand hand = new Hand(cards);
 
@@ -204,11 +229,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankFullHouse()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Two, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Two, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Two, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Ace, CardSuit.DIAMOND));
+            cards.Add(new Card(CardRank.Two, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Two, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Two, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Diamond));
 
             Hand hand = new Hand(cards);
 
@@ -219,11 +244,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankFourOfAKind()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Ace, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Ace, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Ace, CardSuit.HEART));
-            cards.Add(new Card(CardRank.King, CardSuit.CLUB));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Club));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Heart));
+            cards.Add(new Card(CardRank.King, CardSuit.Club));
 
             Hand hand = new Hand(cards);
 
@@ -235,11 +260,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void HandsRankStraightFlush()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards.Add(new Card(CardRank.King, CardSuit.HEART));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards.Add(new Card(CardRank.King, CardSuit.Heart));
 
             Hand hand = new Hand(cards);
 
@@ -256,10 +281,10 @@ namespace PokerHands.API.Test.Data.Hands
         public void ConstructorThowsIfInvalidNumberOfCards()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Nine, CardSuit.HEART));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Heart));
 
             Assert.Throws<ArgumentOutOfRangeException>(() => new Hand(cards));
         }
@@ -268,11 +293,11 @@ namespace PokerHands.API.Test.Data.Hands
         public void ConstructorThowsIfRepeatCards()
         {
             List<Card> cards = new List<Card>();
-            cards.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Queen, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Ten, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Nine, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Jack, CardSuit.HEART));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Queen, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Heart));
 
             Assert.Throws<ArgumentException>(() => new Hand(cards));
         }

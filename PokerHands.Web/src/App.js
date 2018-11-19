@@ -8,7 +8,6 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-
     let players = [
       { key: "Debbie", position: "TBD", handRank: "TBD", cards: [] },
       { key: "Charles", position: "TBD", handRank: "TBD", cards: [] },
@@ -37,8 +36,10 @@ class App extends Component {
         Cards: player.cards.map((card) => this.convertRankForFetchAPI(card.rank) + this.convertSuitForFetchAPI(card.suit))
       }
       ));
-  
-    fetch('/api/PokerHand', {
+
+    const apiRoot = process.env.REACT_APP_API_URL ? process.env.REACT_APP_API_URL : '';
+    
+    fetch(apiRoot + '/api/PokerHand', {
       method: 'POST',
       headers: {
         "Accept": "application/json",
@@ -136,8 +137,6 @@ class App extends Component {
 
   convertSuitForFetchAPI(suit) {
     switch (suit) {
-
-
       case (0):
         // Club
         return "C";
@@ -214,8 +213,8 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1>Poker Hands Sample Project</h1>
         <button onClick={this.dealNewHand}>Deal New Hand</button>
-        <button onClick={this.requestPokerHandAnalysis}>Submit to Server</button>
         {people}
       </div>
     );

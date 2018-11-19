@@ -9,6 +9,9 @@
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -24,5 +27,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://127.0.0.1:5000"
+  "proxy": "http://192.168.1.124:5000"
 }

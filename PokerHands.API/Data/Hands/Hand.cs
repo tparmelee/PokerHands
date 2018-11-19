@@ -52,20 +52,17 @@ namespace PokerHands.API.Data.Hands
                 Dictionary<CardRank, int> thisCardRankSummary = CalculateCardRankOccurencesInHand(Cards);
                 Dictionary<CardRank, int> objCardRankSummary = CalculateCardRankOccurencesInHand(obj.Cards);
                 
-                List<CardRank> thisRankSummary = thisCardRankSummary.Keys.ToList();
-                List<int> thisRankPriorities = thisRankSummary.Select(rank => Card.ConvertRankToPriority(rank)).OrderByDescending(x => x).ToList();
-
-                List<CardRank> objRankSummary = objCardRankSummary.Keys.ToList();
-                List<int> objRankPriorities = objRankSummary.Select(rank => Card.ConvertRankToPriority(rank)).OrderByDescending(x => x).ToList();
+                List<int> thisCardPrioritySummary = SortRankOccuranceSummaryByFrequencyThenPriority(thisCardRankSummary);
+                List<int> objCardPrioritySummary = SortRankOccuranceSummaryByFrequencyThenPriority(objCardRankSummary);
 
                 int index = 0;
-                while (index < thisRankPriorities.Count && index < objRankPriorities.Count) {
-                    if (thisRankPriorities[index] > objRankPriorities[index]) {
+                while (index < thisCardPrioritySummary.Count && index < objCardPrioritySummary.Count) {
+                    if (thisCardPrioritySummary[index] > objCardPrioritySummary[index]) {
                         return 1;
-                    } else if (thisRankPriorities[index] < objRankPriorities[index]) {
+                    } else if (thisCardPrioritySummary[index] < objCardPrioritySummary[index]) {
                         return -1;
                     } else {
-                        // keep progressing through priority list to find first differnce between cards
+                        // keep progressing through priority list to find first difference between cards
                     }
                     index++;
                 }
@@ -81,6 +78,17 @@ namespace PokerHands.API.Data.Hands
             {
                 return 1;
             }
+        }
+
+        // This method is a handy utility to get an sorted ranks by frequency (higher occurence is better),
+        // then a tie-breaker by priority of the rank 
+        private static List<int> SortRankOccuranceSummaryByFrequencyThenPriority(Dictionary<CardRank, int> summary) {
+            return summary.Select(x =>
+                                new KeyValuePair<int, int>(Card.ConvertRankToPriority(x.Key), x.Value))
+                                .OrderByDescending(x => x.Value)
+                                .ThenByDescending(x => x.Key)
+                                .Select(x => x.Key)
+                                .ToList();
         }
 
         private static Dictionary<CardRank, int> CalculateCardRankOccurencesInHand(List<Card> cards)

@@ -8,19 +8,19 @@ namespace PokerHands.API.Test.Data.Cards
     public class CardTests
     {
         [Test]
-        [TestCase(CardRank.Two, CardSuit.SPADE)]
-        [TestCase(CardRank.Three, CardSuit.HEART)]
-        [TestCase(CardRank.Four, CardSuit.CLUB)]
-        [TestCase(CardRank.Five, CardSuit.DIAMOND)]
-        [TestCase(CardRank.Six, CardSuit.SPADE)]
-        [TestCase(CardRank.Seven, CardSuit.HEART)]
-        [TestCase(CardRank.Eight, CardSuit.CLUB)]
-        [TestCase(CardRank.Nine, CardSuit.DIAMOND)]
-        [TestCase(CardRank.Ten, CardSuit.SPADE)]
-        [TestCase(CardRank.Jack, CardSuit.HEART)]
-        [TestCase(CardRank.Queen, CardSuit.CLUB)]
-        [TestCase(CardRank.King, CardSuit.DIAMOND)]
-        [TestCase(CardRank.Ace, CardSuit.SPADE)]
+        [TestCase(CardRank.Two, CardSuit.Spade)]
+        [TestCase(CardRank.Three, CardSuit.Heart)]
+        [TestCase(CardRank.Four, CardSuit.Club)]
+        [TestCase(CardRank.Five, CardSuit.Diamond)]
+        [TestCase(CardRank.Six, CardSuit.Spade)]
+        [TestCase(CardRank.Seven, CardSuit.Heart)]
+        [TestCase(CardRank.Eight, CardSuit.Club)]
+        [TestCase(CardRank.Nine, CardSuit.Diamond)]
+        [TestCase(CardRank.Ten, CardSuit.Spade)]
+        [TestCase(CardRank.Jack, CardSuit.Heart)]
+        [TestCase(CardRank.Queen, CardSuit.Club)]
+        [TestCase(CardRank.King, CardSuit.Diamond)]
+        [TestCase(CardRank.Ace, CardSuit.Spade)]
         public void ConstructorSetsRankTheory(CardRank rank, CardSuit suit)
         {
             Card card = new Card(rank, suit);
@@ -29,10 +29,10 @@ namespace PokerHands.API.Test.Data.Cards
         }
 
         [Test]
-        [TestCase(CardRank.Two, CardSuit.SPADE)]
-        [TestCase(CardRank.Three, CardSuit.HEART)]
-        [TestCase(CardRank.Four, CardSuit.CLUB)]
-        [TestCase(CardRank.Five, CardSuit.DIAMOND)]
+        [TestCase(CardRank.Two, CardSuit.Spade)]
+        [TestCase(CardRank.Three, CardSuit.Heart)]
+        [TestCase(CardRank.Four, CardSuit.Club)]
+        [TestCase(CardRank.Five, CardSuit.Diamond)]
         public void ConstructorSetsSuitTheory(CardRank rank, CardSuit suit)
         {
             Card card = new Card(rank, suit);
@@ -41,11 +41,11 @@ namespace PokerHands.API.Test.Data.Cards
         }
 
         [Test]
-        [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.SPADE, true)]
-        [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.HEART, false)]
-        [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.DIAMOND, false)]
-        [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Two, CardSuit.CLUB, false)]
-        [TestCase(CardRank.Two, CardSuit.SPADE, CardRank.Ace, CardSuit.SPADE, false)]
+        [TestCase(CardRank.Two, CardSuit.Spade, CardRank.Two, CardSuit.Spade, true)]
+        [TestCase(CardRank.Two, CardSuit.Spade, CardRank.Two, CardSuit.Heart, false)]
+        [TestCase(CardRank.Two, CardSuit.Spade, CardRank.Two, CardSuit.Diamond, false)]
+        [TestCase(CardRank.Two, CardSuit.Spade, CardRank.Two, CardSuit.Club, false)]
+        [TestCase(CardRank.Two, CardSuit.Spade, CardRank.Ace, CardSuit.Spade, false)]
         public void CardsAreEqual(CardRank rank1, CardSuit suit1, CardRank rank2, CardSuit suit2, bool expected)
         {
             Card card1 = new Card(rank1, suit1);
@@ -60,19 +60,19 @@ namespace PokerHands.API.Test.Data.Cards
             // Create a list of all cards in a "random" order. 
             List<Card> cards = new List<Card>();
 
-            cards.Add(new Card(CardRank.Ace, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Queen, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Three, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Five, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Six, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Seven, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Eight, CardSuit.CLUB));
-            cards.Add(new Card(CardRank.Nine, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Ten, CardSuit.SPADE));
-            cards.Add(new Card(CardRank.Jack, CardSuit.HEART));
-            cards.Add(new Card(CardRank.Two, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.King, CardSuit.DIAMOND));
-            cards.Add(new Card(CardRank.Four, CardSuit.CLUB));
+            cards.Add(new Card(CardRank.Ace, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Queen, CardSuit.Club));
+            cards.Add(new Card(CardRank.Three, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Five, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Six, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Seven, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Eight, CardSuit.Club));
+            cards.Add(new Card(CardRank.Nine, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Ten, CardSuit.Spade));
+            cards.Add(new Card(CardRank.Jack, CardSuit.Heart));
+            cards.Add(new Card(CardRank.Two, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.King, CardSuit.Diamond));
+            cards.Add(new Card(CardRank.Four, CardSuit.Club));
 
             cards.Sort();
 

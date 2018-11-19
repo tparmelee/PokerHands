@@ -10,9 +10,6 @@ namespace PokerHands.API.test.Controllers.PokerHandControllerData
 {
     public class PokerhandApiParserTests
     {
-        
-        
-
         [Test]
         [TestCase("2", CardRank.Two)]
         [TestCase("3", CardRank.Three)]
@@ -33,29 +30,29 @@ namespace PokerHands.API.test.Controllers.PokerHandControllerData
         }
 
         [Test]
-        [TestCase("S", CardSuit.SPADE)]
-        [TestCase("H", CardSuit.HEART)]
-        [TestCase("C", CardSuit.CLUB)]
-        [TestCase("D", CardSuit.DIAMOND)]
+        [TestCase("S", CardSuit.Spade)]
+        [TestCase("H", CardSuit.Heart)]
+        [TestCase("C", CardSuit.Club)]
+        [TestCase("D", CardSuit.Diamond)]
         public void ParseCardSuit(string test, CardSuit expected) {
 
             Assert.AreEqual(expected, PokerhandApiParser.ParseCardSuit(test));
         }
 
         [Test]
-        [TestCase("2S", CardRank.Two, CardSuit.SPADE)]
-        [TestCase("3H", CardRank.Three, CardSuit.HEART)]
-        [TestCase("4D", CardRank.Four, CardSuit.DIAMOND)]
-        [TestCase("5C", CardRank.Five, CardSuit.CLUB)]
-        [TestCase("6S", CardRank.Six, CardSuit.SPADE)]
-        [TestCase("7H", CardRank.Seven, CardSuit.HEART)]
-        [TestCase("8D", CardRank.Eight, CardSuit.DIAMOND)]
-        [TestCase("9C", CardRank.Nine, CardSuit.CLUB)]
-        [TestCase("10S", CardRank.Ten, CardSuit.SPADE)]
-        [TestCase("JH", CardRank.Jack, CardSuit.HEART)]
-        [TestCase("QD", CardRank.Queen, CardSuit.DIAMOND)]
-        [TestCase("KC", CardRank.King, CardSuit.CLUB)]
-        [TestCase("AS", CardRank.Ace, CardSuit.SPADE)]
+        [TestCase("2S", CardRank.Two, CardSuit.Spade)]
+        [TestCase("3H", CardRank.Three, CardSuit.Heart)]
+        [TestCase("4D", CardRank.Four, CardSuit.Diamond)]
+        [TestCase("5C", CardRank.Five, CardSuit.Club)]
+        [TestCase("6S", CardRank.Six, CardSuit.Spade)]
+        [TestCase("7H", CardRank.Seven, CardSuit.Heart)]
+        [TestCase("8D", CardRank.Eight, CardSuit.Diamond)]
+        [TestCase("9C", CardRank.Nine, CardSuit.Club)]
+        [TestCase("10S", CardRank.Ten, CardSuit.Spade)]
+        [TestCase("JH", CardRank.Jack, CardSuit.Heart)]
+        [TestCase("QD", CardRank.Queen, CardSuit.Diamond)]
+        [TestCase("KC", CardRank.King, CardSuit.Club)]
+        [TestCase("AS", CardRank.Ace, CardSuit.Spade)]
         public void ParseSingleCard(string test, CardRank expectedRank, CardSuit expectedSuit) {
             Card c = PokerhandApiParser.ParseSingleCard(test);
 
@@ -70,19 +67,19 @@ namespace PokerHands.API.test.Controllers.PokerHandControllerData
             Hand hand = PokerhandApiParser.ConvertApiInputToPokerHands(cardStrings);
 
             // 3H
-            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Three && x.Suit == CardSuit.HEART));         
+            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Three && x.Suit == CardSuit.Heart));         
             
             // KS
-            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.King && x.Suit == CardSuit.SPADE));    
+            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.King && x.Suit == CardSuit.Spade));    
 
             // JD
-            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Jack && x.Suit == CardSuit.DIAMOND));    
+            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Jack && x.Suit == CardSuit.Diamond));    
             
             // 4h
-            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Four && x.Suit == CardSuit.HEART));    
+            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Four && x.Suit == CardSuit.Heart));    
 
             // 2S
-            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Two && x.Suit == CardSuit.SPADE));    
+            Assert.IsTrue(hand.Cards.Any((x) => x.Rank == CardRank.Two && x.Suit == CardSuit.Spade));    
         }
     }
 }
