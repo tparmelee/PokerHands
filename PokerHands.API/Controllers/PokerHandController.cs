@@ -15,11 +15,11 @@ namespace PokerHands.API.Controllers
     public class PokerHandController : ControllerBase
     {
         
-        // GET api/values
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(string id)
+        // This is a health check for the AWS deployment
+        [HttpGet]
+        public ActionResult<int> Get()
         {
-            return id;
+            return 1;
         }
 
         // GET api/PokerHand

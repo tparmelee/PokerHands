@@ -208,7 +208,7 @@ class App extends Component {
 
   render() {
 
-    const people = this.state.players.map(element => <Player name={element.key}
+    const people = this.state.players.map(element => <Player key={element.key} name={element.key}
       handRank={element.handRank} position={element.position} cards={element.cards} />);
 
     return (

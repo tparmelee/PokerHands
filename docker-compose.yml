@@ -1,13 +1,13 @@
 version: '3'
 services:
   web:
-    image: taparmelee/pokerhands_web:latest
+    image: pokerhands_web:latest
     build: ./PokerHands.Web
     ports:
      - "80:80"
      - "3000:3000"
   api:
-    image: taparmelee/pokerhands_api:latest
+    image: pokerhands_api:latest
     build: ./PokerHands.API
     ports:
      - "5000:80"
